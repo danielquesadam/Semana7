@@ -9,4 +9,8 @@ public class Menu {
 public Menu(){
     System.out.println("Hola estoy en Menu");
 }
+
+public void MostrarOpciones(){
+    //Libreria para mostrar y obtener datos en la terminal
+}
 }
