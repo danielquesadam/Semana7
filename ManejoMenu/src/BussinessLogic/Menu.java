@@ -85,8 +85,4 @@ public class Menu {
         while (opcion != 4);
         entrada.close();
     }
-
-    public void Saludar() {
-        System.out.println("Hola");
-    }
 }
