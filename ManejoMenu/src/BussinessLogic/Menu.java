@@ -1,16 +1,73 @@
 package BussinessLogic;
+
+import java.util.Scanner;
+
 //Es la clase encargada de manejar el menu y las diferentes opciones o operaciones del sistema.
 //Es decir es la clase orquestadora del sistema
 public class Menu {
-//Constructor de la clase
-//El constructor siempre se llama igual que la clase
-//Y definir como va a iniciar la clase
-//Es el primer metodo que se ejecuta cuando se crea una instancia de la clase
-public Menu(){
-    System.out.println("Hola estoy en Menu");
-}
+    // Constructor de la clase
+    // El constructor siempre se llama igual que la clase
+    // Y definir como va a iniciar la clase
+    // Es el primer metodo que se ejecuta cuando se crea una instancia de la clase
+    public Menu() {// Inicio constructor
+    }// Fin de constructor
 
+    // Metodo para mostrar las opciones del menu en pantalla
 public void MostrarOpciones(){
-    //Libreria para mostrar y obtener datos en la terminal
+
+    //Paso 1. Vamos a crear una instancia de la libreria Scanner para interactuar con la terminal
+    //Se le pasa como parametro al constructor de Scanner System.in para indicar que solo deseamos
+    //Obtener los valores que ingresa el usuario
+    Scanner entrada = new Scanner(System.in);
+
+    //Paso 2. Vamos a crear una variable que almacene la opcion seleccionada o ingresada por el usuario
+    int opcion;
+
+    //Paso 3. Vamos a crear un ciclo do-while
+    do{//Inicio del do
+
+//Paso 4. Vamos a mostrar las opciones que estan permitidas para el usuario
+//Utilizamos System.out.println
+System.out.println("***Menu***");
+System.out.println("Opcion 1.");
+System.out.println("Opcion 2.");
+System.out.println("Opcion 3.");
+System.out.println("Salir.");
+System.out.print("Elija una opcion:");
+
+//Paso 5. Vamos a asignar a la variable opcion que es de tipo in el valor que ingreso el usuario, es decir, la opcion seleccionada
+//El valor seleccionado por el usuario lo obtenemos haciendo un llamado al metodo nextInt() de la clase Scanner que retorna el proximo valor de tipo
+//int ingresado por el usuario
+opcion = entrada.nextInt();
+
+//Paso 6. Vamos a definir un switch es un manejador de opciones un poco mas flexible que los if o else
+//Recibe un parametro, en este caso la variable opcion que almacena la opcion seleccionada
+// Y se pueden crear dentro del switch diferentes casos, los casos son como las opciones que el switch maneja para un valor en particular
+//Los casos son escenarios para opciones establecidas
+//Existe un escenario default que va a capturar todas las opciones no manejadas por el switch
+switch (opcion){
+    case 1:
+    System.out.println("Has seleccionado la opcion 1");
+    //Agrega el codigo correspondiente a la opcion 1
+break;
+    case 2:
+    System.out.println("Has seleccionado la opcion 2");
+    //Agrega el codigo correspondiente a la opcion 2
+break;
+    case 3:
+    System.out.println("Has seleccionado la opcion 3");
+    //Agrega el codigo correspondiente a la opcion 3
+break;
+    case 4:
+    System.out.println("Has seleccionado la opcion 4");
+    //Agrega el codigo correspondiente a la opcion 4
+break;
+    default:
+    System.out.println("Opcion invalida. Intentalo de nuevo");
+break;
+}//Finaliza switch
+System.out.println();
+    }//Fin del do
+    while (opcion !- 4);
 }
 }
