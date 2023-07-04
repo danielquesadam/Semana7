@@ -85,4 +85,24 @@ public class Menu {
         while (opcion != 4);
         entrada.close();
     }
+    public void login(){
+
+        //Se le pasa cero parametro al constructor de Scanner System.In para indicar
+        //que solo deseamos
+        //obtener los valores que ingresa el usuario
+
+        Scanner entrada = new Scanner(System.in);
+
+        //Solicitar los valores al usuario
+
+        String vlUsuario = "";
+        String vlPass = "";
+        System.out.println("Por favor ingrese sus credenciales");
+        System.out.println("Ingrese su usuario");
+        vlUsuario = entrada.next();
+        System.out.println("Por favor ingrese su contrasena");
+        vlPass = entrada.next();
+
+
+    }
 }
