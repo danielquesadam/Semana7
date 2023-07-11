@@ -5,7 +5,7 @@ public class App {
     public static void main(String[] args) {
         // Paso 1. Vamos a definir la clase manejadora del sistema para que sea la
         // primera en ejecutarse */
-        // Para esto creamos una instanci de la clase Menu
+        // Para esto creamos una instancia de la clase Menu
         new Menu();
     }
 }

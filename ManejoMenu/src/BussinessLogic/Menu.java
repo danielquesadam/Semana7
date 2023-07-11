@@ -10,7 +10,8 @@ public class Menu {
     // Y definir como va a iniciar la clase
     // Es el primer metodo que se ejecuta cuando se crea una instancia de la clase
     public Menu() {// Inicio constructor
-        MostrarOpciones();
+        login();
+
     }// Fin de constructor
 
     // Metodo para mostrar las opciones del menu en pantalla
@@ -84,16 +85,21 @@ public class Menu {
           // finalizar
         while (opcion != 4);
         entrada.close();
-    }
-    public void login(){
+    }// Fin
 
-        //Se le pasa cero parametro al constructor de Scanner System.In para indicar
-        //que solo deseamos
-        //obtener los valores que ingresa el usuario
+    public void Saludar() {
+        System.out.println("Hola.");
+    }
+
+    public void login() {
+
+        // Se le pasa cero parametro al constructor de Scanner System.In para indicar
+        // que solo deseamos
+        // obtener los valores que ingresa el usuario
 
         Scanner entrada = new Scanner(System.in);
 
-        //Solicitar los valores al usuario
+        // Solicitar los valores al usuario
 
         String vlUsuario = "";
         String vlPass = "";
@@ -103,6 +109,18 @@ public class Menu {
         System.out.println("Por favor ingrese su contrasena");
         vlPass = entrada.next();
 
+        Seguridad vlSeguridad = new Seguridad();
+
+        Boolean vlResultado = vlSeguridad.buscarPorUsuarioClave(vlUsuario, vlPass);
+
+        if (vlResultado) {
+            System.out.println("Bienvenido.");
+            MostrarOpciones();
+        } else {
+            System.out.println("Credenciales incorrectas.");
+        }
+
+        entrada.close();
 
     }
 }
