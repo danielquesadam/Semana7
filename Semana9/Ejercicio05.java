@@ -22,6 +22,6 @@ public class Ejercicio05 {
         }
 
         int cantidadLetras = palabra.length();
-        System.out.println("La cantidad de letras en la palabra " + palabra + " es : " + cantidadLetras);
+        System.out.println("La cantidad de letras en la palabra " + palabra + " es: " + cantidadLetras);
     }
 }
