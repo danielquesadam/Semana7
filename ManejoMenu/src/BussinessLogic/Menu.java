@@ -1,10 +1,14 @@
 package BussinessLogic;
 
 import java.util.Scanner;
+import Common.Mesa;
 
 //Es la clase encargada de manejar el menu y las diferentes opciones o operaciones del sistema.
 //Es decir es la clase orquestadora del sistema
 public class Menu {
+
+    private Mesa[] vgArregloDeMesas = new Mesa[10];
+
     // Constructor de la clase
     // El constructor siempre se llama igual que la clase
     // Y definir como va a iniciar la clase
@@ -119,6 +123,40 @@ public class Menu {
         } else {
             System.out.println("Credenciales incorrectas.");
         }
+
+        // Todas mis mesas van a tener 4 espacios.
+    public void inicializarMesas() {
+        //todas mis mesas van a tener 4 espacios
+        for(int indice = 0; vgArregloDeMesas > indice; indice++){
+            vgArregloDeMesas[indice] = new Mesa(Indice + 1, vpCantidadSillas:4);
+        }
+    }
+//Crear un metodo
+    public void getMesasPorEstado(String vpEstado){
+        System.out.println("Lista de mesas: " + vpEstado);
+
+        for(int indice = 0; vgArregloDeMesas.lengt > indice; indice++) {
+            String vlEstado = vgArregloDeMesas[indice].getVgEstado();
+
+            if (vlEstado.equals(vpEstado)) {
+                System.out.println("Mesa #" + vgArregloDeMesas[indice].getNumeroDeMesa());
+            }
+        }
+    }
+
+    public void reservarMesa(Cliente vpCliente, int vpNumeroMesa, String vpFecha, String vpHora){
+
+        for (int indice = 0; vgArregloDeMesas.lengt > indice; indice ++)
+
+        if (vgArregloDeMesas[indice]).getvgNumeroDeMesa() == vpNumeroMesa && vgArregloDeMesas[indice].getVgEstado().equals("Disponible")){
+            System.out.println("La mesa #" + vpNumeroMesa + ", fue reservada de forma exitosa!");
+        
+            //Paso cambiar el estado de la mesa reservada.
+
+            return;
+        }
+
+    }        
 
         entrada.close();
 
