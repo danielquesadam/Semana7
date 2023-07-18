@@ -86,6 +86,14 @@ public class Cliente {
      * y consistente de configurar objetos con valores iniciales, lo que contribuye
      * a la encapsulación y la correcta utilización de las clases.
      */
+
+    public Cliente (){
+        vgNombre = "";
+        vgApellido = "";
+        vgIdentificacion = "";
+        vgTelefono = "";
+    }
+
     public Cliente(String vpNombre, String vpApellido, String vpIdentificacion, String vpTelefono) {
         // 2.1 Asignamos los valores recibidos por parametros a nuestros atributos
         // globales.
@@ -96,37 +104,41 @@ public class Cliente {
         vgTelefono = vpTelefono;
     }
 
-    // Paso 3. Get y Set
-    public String getVgNombre() {
+    /** Paso 3 Get y Set */
+    public String getNombre() {
         return vgNombre;
     }
 
-    public void setVgNombre(String vgNombre) {
-        this.vgNombre = vgNombre;
+    public void setNombre(String nombre) {
+        vgNombre = nombre;
     }
 
-    public String getVgApellido() {
+    public String getApellido() {
         return vgApellido;
     }
 
-    public void setVgApellido(String vgApellido) {
-        this.vgApellido = vgApellido;
+    public void setApellido(String apellido) {
+        vgApellido = apellido;
     }
 
-    public String getVgIdentificacion() {
+    public String getIdentificacion() {
         return vgIdentificacion;
     }
 
-    public void setVgIdentificacion(String vgIdentificacion) {
-        this.vgIdentificacion = vgIdentificacion;
+    public void setIdentificacion(String identificacion) {
+        vgIdentificacion = identificacion;
     }
 
-    public String getVgTelefono() {
+    public String getTelefono() {
         return vgTelefono;
     }
 
-    public void setVgTelefono(String vgTelefono) {
-        this.vgTelefono = vgTelefono;
+    public void setTelefono(String telefono) {
+        vgTelefono = telefono;
+    }
+
+    public String getInformacion() {
+        return "Nombre: " + getNombre() + " Apellido: " + getApellido() + " Identificacion: " + getIdentificacion();
     }
 
 }

@@ -2,12 +2,15 @@ package BussinessLogic;
 
 import java.util.Scanner;
 import Common.Mesa;
+import Common.Cliente;
 
 //Es la clase encargada de manejar el menu y las diferentes opciones o operaciones del sistema.
 //Es decir es la clase orquestadora del sistema
 public class Menu {
 
     private Mesa[] vgArregloDeMesas = new Mesa[10];
+    final String vgEstadoDisponible = "Disponible";
+    final String vgEstadoReservada = "Reservada";
 
     // Constructor de la clase
     // El constructor siempre se llama igual que la clase

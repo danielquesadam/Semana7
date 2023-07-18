@@ -42,7 +42,7 @@ public class Seguridad {
     // Tambien se utiliza la variable global arregloUsuarios
     // Que es el arreglo de Usuario en el que se realizara la busqueda
 
-    public boolean buscarPorUsuarioClave(String vpUsuario, String vpClave){
+    public boolean buscarPorUsuarioClave(String vpUsuario, String vpClave) {
         /**
          * Se inicia un bucle for que recorre el arreglo de objetos desde el índice 0
          * hasta el último índice (length - 1).
@@ -57,17 +57,22 @@ public class Seguridad {
          * el condicional indice < arregloUsuarios.length le indica al for que debe
          * continuar siempre y cuando la respuesta sea TRUE
          */
-        for (int indice = 0; indice < arregloUsuarios.length; indice++){
+        for (int indice = 0; indice < arregloUsuarios.length; indice++) {
             /**
-             * Utilizamos la variable indice para obtener el usuario almacenado en la
-             * posicion del arreglo
+             * //Utilizamos la variable indice para obtener el usuario almacenado en la
+             * // posicion del arreglo
              */
             String vlUsuario = arregloUsuarios[indice].getVgNombreDeUsuario();
             String vlClave = arregloUsuarios[indice].getVgPassword();
-            if (vlClave.equals(vpClave) && vlUsuario.equals(vpUsuario)){
+
+            if (vlClave.equals(vpClave) && vlUsuario.equals(vpUsuario)) {
+
+                // Usuario existe y las credenciales son correctas
                 return true;
             }
         }
+
+        // Usuario no existe o las credenciales son incorrectas
         return false;
     }
 }

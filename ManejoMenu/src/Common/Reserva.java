@@ -1,7 +1,5 @@
 package Common;
 
-import java.sql.Date;
-
 public class Reserva {
 
     Cliente cliente;
@@ -9,7 +7,4 @@ public class Reserva {
 
     String fecha; //dd/mm/yyyy
     String hora; // 
-
-    //Crear un metodo
-
 }

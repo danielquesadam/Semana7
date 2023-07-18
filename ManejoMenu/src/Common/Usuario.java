@@ -1,6 +1,7 @@
 package Common;
 
 public class Usuario {
+    
     private String vgNombreDeUsuario;
     private String vgPassword;
 
